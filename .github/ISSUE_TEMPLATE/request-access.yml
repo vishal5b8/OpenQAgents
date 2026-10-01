@@ -1,0 +1,53 @@
+name: Request code access
+description: Ask for read-only access to the private source code of this framework.
+title: "Access request: "
+labels: ["access-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest! I review every request personally. If it's approved, you'll get a
+        GitHub invitation with **read-only** access to the private repository.
+
+        **This request is public.** Please don't include your email address or phone number.
+  - type: input
+    id: github_username
+    attributes:
+      label: Your GitHub username
+      description: The invitation is sent to this account.
+      placeholder: octocat
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Your name
+    validations:
+      required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: Your role
+      options:
+        - Recruiter / hiring manager
+        - QA / SDET / test automation engineer
+        - Developer
+        - Student / learning
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: company
+    attributes:
+      label: Company (optional)
+  - type: textarea
+    id: purpose
+    attributes:
+      label: What would you like to use it for? (optional)
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Terms
+      options:
+        - label: I will not copy, redistribute or publish the code without the author's permission.
+          required: true
